@@ -28,3 +28,4 @@ public class MainResponce {
         return isSimple;
     }
 }
+
