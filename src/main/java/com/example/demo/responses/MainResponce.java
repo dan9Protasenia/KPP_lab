@@ -1,16 +1,16 @@
 package com.example.demo.responses;
 
+import com.example.demo.process.OutputParams;
+
 public class MainResponce {
     private final long id;
     private final int number;
-    private final boolean isEven;
-    private final boolean isSimple;
+    private final OutputParams params;
 
-    public MainResponce(long id, int number,boolean isEven,boolean isSimple) {
+    public MainResponce(long id, int number,OutputParams params) {
         this.id = id;
         this.number = number;
-        this.isEven=isEven;
-        this.isSimple=isSimple;
+        this.params = params;
     }
 
     public long getId() {
@@ -21,11 +21,6 @@ public class MainResponce {
         return number;
     }
 
-    public boolean getIsEven(){
-        return isEven;
-    }
-    public boolean getIsSimple(){
-        return isSimple;
-    }
+    public OutputParams getParams() { return params; }
 }
 
