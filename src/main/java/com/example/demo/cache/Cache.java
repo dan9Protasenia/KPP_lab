@@ -2,14 +2,16 @@ package com.example.demo.cache;
 
 import com.example.demo.logger.MyLogger;
 import com.example.demo.process.OutputParams;
+import org.springframework.stereotype.Service;
+
 import java.util.HashMap;
 
-
+@Service
 public class Cache {
     public static HashMap<Integer, OutputParams> map = new HashMap<>();
     public void put(OutputParams params, int input) {
-        if (!map.containsKey(params)) {
-            map.put(input, params);
+        if (!map.containsKey(params)) {                 //containsKey вернет true, если в мапе есть такой ключ
+            map.put(input, params);                     // метод добавления эллемента
             MyLogger.info("Key: " + params + " Value: " + input +  " is put in cache");
         }
         else {
